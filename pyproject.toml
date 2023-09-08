@@ -12,6 +12,9 @@ fastapi = {extras = ["all"], version = "^0.103.1"}
 starlette-admin = "^0.11.2"
 sqlalchemy = "^2.0.20"
 pydantic-settings = "^2.0.3"
+psycopg2-binary = "^2.9.7"
+sqlalchemy-utils = "^0.41.1"
+asyncpg = "^0.28.0"
 
 
 [build-system]

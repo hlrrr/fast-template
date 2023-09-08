@@ -10,5 +10,3 @@ class Settings(BaseSettings):
 
 settings = Settings() # type: ignore
 # settings = Settings(_env_file='.env.prod', _env_file_encoding='utf-8')
-
-print(settings)
