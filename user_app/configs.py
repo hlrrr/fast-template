@@ -6,6 +6,10 @@ class Settings(BaseSettings):
                                       env_file_encoding='utf-8',
                                       extra='allow',)
     DATABASE_URL: str
+    SMTP_server: str
+    SMTP_address: str
+    SMTP_password: str
+    SMTP_port_SSL: int
     # some_extra_value: str = 'extra'
 
 settings = Settings() # type: ignore

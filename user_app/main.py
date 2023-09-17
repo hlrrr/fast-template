@@ -4,8 +4,10 @@ from fastapi.middleware.cors    import CORSMiddleware
 from starlette_admin.contrib.sqla.admin import Admin
 from starlette_admin.contrib.sqla.view  import ModelView
 
-from .endpoints     import user
-# from .configs     import origins
+import uvicorn
+
+# from .endpoints     import user
+from configs     import settings
 
 description = """
 ChimichangApp API helps you do awesome stuff. 🚀
@@ -51,7 +53,8 @@ app.add_middleware(
 )
 # 리퀘스트는 정의한 미들웨어들을 역순으로 타고 들어옴.
 
-app.include_router(user)
+
+# app.include_router(user)
 
 '''
 for database
@@ -70,3 +73,6 @@ for starlette_admin
 async def root():
     pass
 
+
+if __name__ == "__main__":
+    uvicorn.run(app='main:app', host="0.0.0.0", port=8888, reload=True)
